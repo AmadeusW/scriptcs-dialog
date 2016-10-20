@@ -5,9 +5,20 @@
         ItemsSource="{Binding Path=Options}">
 
         <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <!-- Using instances of Option as binding source -->
+            <DataTemplate DataType="{x:Type StringOption}">
                 <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding Name}" Width="200" />
+                    <TextBox Text="{Binding Value}" MinWidth="200" />
+                </StackPanel>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ButtonOption}">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{Binding Name}" Width="200" />
+                    <Button Text="{Binding Value}" MinWidth="200" />
+                </StackPanel>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type Option}">
+                <StackPanel Orientation="Horizontal" Background="Red">
                     <Label Content="{Binding Name}" Width="200" />
                     <TextBox Text="{Binding Value}" MinWidth="200" />
                 </StackPanel>

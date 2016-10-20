@@ -1,5 +1,6 @@
-#load DialogViewModel.csx
 #load Options.csx
+#load DialogViewModel.csx
+using ScriptCs.Wpf;
 
 var wpf = Require<Wpf>();
 
